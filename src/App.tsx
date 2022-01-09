@@ -25,8 +25,7 @@ export const App = (): ReactElement => {
     // init data
     dispatch(fetchTracks());
     dispatch(fetchPersons());
-    //FIXME: wrong empty deps
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     // run queue of tracks
