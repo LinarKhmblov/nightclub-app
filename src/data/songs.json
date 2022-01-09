@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1,
+    "artist": "Nirvana",
+    "title": "Nevermind",
+    "genre": "pop",
+    "duration": 5000
+  },
+  {
+      "id": 2,
+      "artist": "The Beach Boys",
+      "title": "Pet Sounds",
+      "genre": "hiphop",
+      "duration": 5000
+  },
+  {
+      "id": 3,
+      "artist": "Marvin Gaye",
+      "title": "What's Going On",
+      "genre": "house",
+      "duration": 5000
+  },
+  {
+      "id": 4,
+      "artist": "Jimi Hendrix Experience",
+      "title": "Are You Experienced?",
+      "genre": "hiphop",
+      "duration": 5000
+  },
+  {
+      "id": 5,
+      "artist": "U2",
+      "title": "The Joshua Tree",
+      "genre": "hiphop",
+      "duration": 5000
+  },
+  {
+      "id": 6,
+      "artist": "The Beatles",
+      "title": "Abbey Road",
+      "genre": "Rock",
+      "duration": 2000
+  },
+  {
+      "id": 7,
+      "artist": "Fleetwood Mac",
+      "title": "Rumours",
+      "genre": "hiphop",
+      "duration": 10000
+  },
+  {
+      "id": 8,
+      "artist": "Elvis Presley",
+      "title": "Sun Sessions",
+      "genre": "house",
+      "duration": 5000
+  },
+  {
+      "id": 9,
+      "artist": "Michael Jackson",
+      "title": "Thriller",
+      "genre": "pop",
+      "duration": 5000
+  },
+  {
+      "id": 10,
+      "artist": "The Rolling Stones",
+      "title": "Exile on Main Street",
+      "genre": "hiphop",
+      "duration": 60000
+  },
+  {
+      "id": 11,
+      "artist": "Bruce Springsteen",
+      "title": "Born to Run",
+      "genre": "house",
+      "duration": 5000
+  }
+]

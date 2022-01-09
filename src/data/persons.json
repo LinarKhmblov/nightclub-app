@@ -1,0 +1,50 @@
+[
+  {
+      "id": 1,
+      "name": "Petr Ivanov",
+      "sex": "male",
+      "skills": ["pop", "house"]
+  },
+  {
+      "id": 2,
+      "name": "Anna Valova",
+      "sex": "female",
+      "skills": ["house"]
+  },
+  {
+      "id": 3,
+      "name": "Anna Valova",
+      "sex": "male",
+      "skills": ["hiphop", "house"]
+  },
+  {
+      "id": 4,
+      "name": "Valentina Shevchenko",
+      "sex": "female",
+      "skills": ["house", "hiphop"]
+  },
+  {
+      "id": 5,
+      "name": "Felix Drozhanov",
+      "sex": "male",
+      "skills": ["hiphop", "pop"]
+  },
+  {
+      "id": 6,
+      "name": "Fedor Tolstoy",
+      "sex": "male",
+      "skills": ["hiphop"]
+  },
+  {
+      "id": 7,
+      "name": "Zalima Haroeva",
+      "sex": "female",
+      "skills": ["hiphop", "house", "pop"]
+  },
+  {
+    "id": 8,
+    "name": "Kamilla Karenina",
+    "sex": "female",
+    "skills": ["pop"]
+  }
+]
