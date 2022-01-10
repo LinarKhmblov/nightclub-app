@@ -1,3 +1,5 @@
+import { TMusicActions } from "./actions";
+
 export interface ITrack {
     id: number,
     artist?: string,
@@ -9,12 +11,10 @@ export interface ITrack {
 export interface IMusicState {
     tracks: ITrack[];
     currentTrack: ITrack;
-    currentTrackId: ITrack['id'];
 }
 
 const defaultState: IMusicState = {
     tracks: [],
-    currentTrackId: 0,
     currentTrack: {
         id: 0,
         title: '',
@@ -23,10 +23,8 @@ const defaultState: IMusicState = {
     }
 };
 
-const SET_CURRENT_TRACK = 'SET_CURRENT_TRACK';
-const SET_TRACKS = 'SET_TRACKS';
-
-type TMusicActions = TSetTracksAction | TSetCurrentTrackAction;
+export const SET_CURRENT_TRACK = 'SET_CURRENT_TRACK';
+export const SET_TRACKS = 'SET_TRACKS';
 
 export const musicReducer = (state = defaultState, action: TMusicActions): IMusicState => {
     switch(action.type) {
@@ -38,16 +36,3 @@ export const musicReducer = (state = defaultState, action: TMusicActions): IMusi
             return state;
     }
 }
-export type TSetTracksAction = {
-    type: 'SET_TRACKS',
-    payload: ITrack[]
-}
-export type TSetCurrentTrackAction = {
-    type: 'SET_CURRENT_TRACK',
-    payload: ITrack
-}
-
-export const setTracks = (payload: ITrack[]): TSetTracksAction => ({type: SET_TRACKS, payload: payload});
-export const setCurrentTrackAction = (payload: ITrack): TSetCurrentTrackAction => ({type: SET_CURRENT_TRACK, payload: payload});
-
-

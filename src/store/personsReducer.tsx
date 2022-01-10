@@ -9,16 +9,11 @@ export interface IPersonState {
     persons: IPerson[]
 }
 
-export type TSetPersonsAction = {
-    type: string,
-    payload: IPerson[]
-}
-
 const defaultState: IPersonState = {
     persons: []
 };
 
-const SET_PERSONS = 'SET_PERSONS';
+export const SET_PERSONS = 'SET_PERSONS';
 
 export const personsReducer = (state = defaultState, action: { type: string; payload: IPerson[]; }) => {
     switch(action.type) {
@@ -29,4 +24,3 @@ export const personsReducer = (state = defaultState, action: { type: string; pay
     }
 };
 
-export const setPersons = (payload: IPerson[]) => ({type: SET_PERSONS, payload: payload});

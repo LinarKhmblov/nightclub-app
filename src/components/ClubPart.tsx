@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 import { IPerson } from "../store/personsReducer";
 import { Person } from "./Person";
 
@@ -7,7 +7,8 @@ interface IClubPartProps {
     motion?: string;
     title: string;
 }
-export const ClubPart: FC<IClubPartProps> = ({persons, motion, title}: IClubPartProps): JSX.Element => {
+
+export const ClubPart: FC<IClubPartProps> = memo(({persons, motion, title}: IClubPartProps): JSX.Element => {
     return (
         <div className="club_part">
             <div className="club_part__title">
@@ -20,4 +21,4 @@ export const ClubPart: FC<IClubPartProps> = ({persons, motion, title}: IClubPart
             </div>
         </div>
     )
-};
+});

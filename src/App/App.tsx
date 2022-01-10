@@ -1,13 +1,15 @@
 import { ReactElement, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchPersons, fetchTracks, IRootState } from './store/store';
-import { ITrack } from './store/musicReducer';
-import { IPerson } from './store/personsReducer';
-import { Club } from './components/Club';
-import { DisplayDataCurrentTrack, DisplayDataSeparatedPersons } from './components/DisplayDataComponents';
-import { queue } from './QueueMusic';
 import './App.scss';
-import './components/ComponentsStyles.scss';
+import '../components/ComponentsStyles.scss';
+import { IPerson } from '../store/personsReducer';
+import { IRootState } from '../store/store';
+import { ITrack } from '../store/musicReducer';
+import { queue } from './QueueMusic';
+import { DisplayDataCurrentTrack, DisplayDataSeparatedPersons } from '../components/DisplayDataComponents';
+import { Club } from '../components/Club';
+import { fetchPersons, fetchTracks } from '../store/middleware';
+import * as selectors from '../store/selectors';
 
 export interface ISeparatedPersons {
   drinkingPersons: IPerson[];
@@ -16,9 +18,9 @@ export interface ISeparatedPersons {
 
 export const App = (): ReactElement => {
   const dispatch = useDispatch();
-  const persons = useSelector<IRootState, IPerson[]>((state) => state.persons.persons);
-  const currentTrack = useSelector<IRootState, ITrack>((state) => state.music.currentTrack);
-  const tracks = useSelector<IRootState, ITrack[]>(state => state.music.tracks);
+  const persons = useSelector<IRootState, IPerson[]>(selectors.persons);
+  const tracks = useSelector<IRootState, ITrack[]>(selectors.tracks);
+  const currentTrack = useSelector<IRootState, ITrack>(selectors.currentTrack, selectors.isEqualTrack);
   const [separatedPersons, setSeparatedPersons] = useState<{drinkingPersons: IPerson[], dancingPersons: IPerson[]}>({ drinkingPersons: [], dancingPersons: [] });
 
   useEffect(() => {
@@ -28,7 +30,7 @@ export const App = (): ReactElement => {
   }, [dispatch]);
 
   useEffect(() => {
-    // run queue of tracks
+    // run tracks
     queue.init(tracks);
   }, [tracks]);
 
@@ -41,11 +43,11 @@ export const App = (): ReactElement => {
       }, { dancingPersons: [], drinkingPersons: []}),
     );
   }, [currentTrack, persons]);
-
+  
   return (
     <div className="App">
       <DisplayDataCurrentTrack {...currentTrack}/>
-      <Club {...separatedPersons} />
+      <Club separatedPersons={separatedPersons} currentTrack={currentTrack} />
       <DisplayDataSeparatedPersons {...separatedPersons}/>
     </div>
   );
