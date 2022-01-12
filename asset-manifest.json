@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/nightclub-app/static/css/main.d216865a.css",
-    "main.js": "/nightclub-app/static/js/main.66c90c28.js",
+    "main.css": "/nightclub-app/static/css/main.0530a102.css",
+    "main.js": "/nightclub-app/static/js/main.b5b71832.js",
     "index.html": "/nightclub-app/index.html",
-    "main.d216865a.css.map": "/nightclub-app/static/css/main.d216865a.css.map",
-    "main.66c90c28.js.map": "/nightclub-app/static/js/main.66c90c28.js.map"
+    "main.0530a102.css.map": "/nightclub-app/static/css/main.0530a102.css.map",
+    "main.b5b71832.js.map": "/nightclub-app/static/js/main.b5b71832.js.map"
   },
   "entrypoints": [
-    "static/css/main.d216865a.css",
-    "static/js/main.66c90c28.js"
+    "static/css/main.0530a102.css",
+    "static/js/main.b5b71832.js"
   ]
 }
