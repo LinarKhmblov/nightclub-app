@@ -6,10 +6,11 @@ import { IPerson } from '../store/personsReducer';
 import { IRootState } from '../store/store';
 import { ITrack } from '../store/musicReducer';
 import { queue } from './QueueMusic';
-import { DisplayDataCurrentTrack, DisplayDataSeparatedPersons } from '../components/DisplayDataComponents';
 import { Club } from '../components/Club';
 import { fetchPersons, fetchTracks } from '../store/middleware';
 import * as selectors from '../store/selectors';
+import { CurrentTrackView } from '../components/CurrentTrackView';
+import { SeparatedPersonsView } from '../components/SeparatedPersonsView';
 
 export interface ISeparatedPersons {
   drinkingPersons: IPerson[];
@@ -46,9 +47,9 @@ export const App = (): ReactElement => {
   
   return (
     <div className="App">
-      <DisplayDataCurrentTrack {...currentTrack}/>
+      <CurrentTrackView {...currentTrack}/>
       <Club separatedPersons={separatedPersons} currentTrack={currentTrack} />
-      <DisplayDataSeparatedPersons {...separatedPersons}/>
+      <SeparatedPersonsView {...separatedPersons}/>
     </div>
   );
 }
