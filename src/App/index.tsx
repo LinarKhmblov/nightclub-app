@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import './App.scss';
 import '../components/ComponentsStyles.scss';
 import { IPerson } from '../store/personsReducer';
-import { IRootState } from '../store/store';
 import { ITrack } from '../store/musicReducer';
 import { queue } from './QueueMusic';
 import { Club } from '../components/Club';
@@ -11,6 +10,7 @@ import { fetchPersons, fetchTracks } from '../store/middleware';
 import * as selectors from '../store/selectors';
 import { CurrentTrackView } from '../components/CurrentTrackView';
 import { SeparatedPersonsView } from '../components/SeparatedPersonsView';
+import { IRootState } from '../store';
 
 export interface ISeparatedPersons {
   drinkingPersons: IPerson[];

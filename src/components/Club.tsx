@@ -1,5 +1,5 @@
 import { memo, FC } from "react";
-import { ISeparatedPersons } from "../App/App";
+import { ISeparatedPersons } from "../App";
 import { ITrack } from "../store/musicReducer";
 import { ClubPart } from "./ClubPart";
 

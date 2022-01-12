@@ -1,5 +1,5 @@
+import { IRootState } from ".";
 import { ITrack } from "./musicReducer";
-import { IRootState } from "./store";
 
 export const persons = (state: IRootState) => state.persons.persons;
 export const tracks = (state: IRootState) => state.music.tracks;

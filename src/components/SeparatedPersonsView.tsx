@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { ISeparatedPersons } from "../App/App";
+import { ISeparatedPersons } from "../App";
 import { SeparatedPersonsList } from "./SeparatedPersonsList";
 
 export const SeparatedPersonsView = memo((separatedPersons: ISeparatedPersons) => {

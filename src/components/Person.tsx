@@ -1,4 +1,5 @@
 import { FC } from "react";
+import './Person.scss';
 
 interface IPersonProps {
     name: string;

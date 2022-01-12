@@ -1,6 +1,6 @@
+import { store } from '../store';
 import { setCurrentTrackAction } from '../store/actions';
 import { ITrack } from '../store/musicReducer';
-import { store } from '../store/store';
 
 class QueueMusic {
   private _queue: ITrack[];
